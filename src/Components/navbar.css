@@ -1,0 +1,9 @@
+.navbar>.container{
+    justify-content: flex-start!important;   
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: red;
+    padding: 5%;
+}
