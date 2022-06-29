@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link } from "react-router-dom";
 
 const Menu = ({ items }) => {
   return (
@@ -7,10 +8,10 @@ const Menu = ({ items }) => {
         const { key, title, event_img, event_name, event_price, event_info } = menuItem
         return (
           <article key={key} className="menu-item">
-            <img src={event_img} alt={title} className="photo" />
+            <Link to="product"><img src={event_img} alt={title} className="photo" /></Link>
             <div className="item-info">
               <header>
-                <h4>{event_name}</h4>
+              <Link to="product"><h4>{event_name}</h4></Link>
                 <h4 className="price">${event_price}</h4>
               </header>
               <p className="item-text">{event_info}</p>

@@ -11,6 +11,7 @@ import NavBar from "./Components/NavBar";
 import Cartelera from "./Components/Cartelera"
 import Carrito from "./Components/Carrito"
 import Login from "./Components/Login"
+import Producto from "./Components/Producto";
 
 
 function App() {
@@ -39,7 +40,8 @@ useEffect(()=>{
       <Routes>
         <Route element={<Home/>} path="/" />
         <Route element={<Login />} path="/login"></Route>
-        <Route element={<Cartelera />} path="/events"></Route>
+        <Route element={<Cartelera eventos={Eventos} />} path="/events"></Route>
+        <Route element={<Producto />} path="/events/product"></Route>
         <Route element={<Carrito />} path="/shopping"></Route>
       </Routes>
     </BrowserRouter>

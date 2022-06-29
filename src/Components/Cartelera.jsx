@@ -21,7 +21,7 @@ export default function Cartelera() {
   }
   return (
     <main>
-      <Carrusel >pene</Carrusel>
+      <Carrusel eventos={items}></Carrusel>
       <section className="menu section">
         <div className="title">
           <h2>our menu</h2>

@@ -1,17 +1,19 @@
 import React from 'react'
-import Slider from 'infinite-react-carousel'
+import Slider from "infinite-react-carousel"
 
 import './Slider.css'
 
-const Carousel = ({ images }) => {
+const Carousel = (props) => {
+	let {eventos} = props
 	return (
 		<section className='slider'>
-			<h1 className='slider__title'>Carousel con infinite-react-carousel</h1>
-			<Slider className='slider__content'>
-				{images.map((image) => (
-					<div key={image.id} className='slider__content--item'>
-						<img src={image.image} alt={image.title} />
-						<p className='slider-description'>{image.title}</p>
+			<Slider className='slider__content' autoplay>
+
+				{eventos.map((event) => (
+					<div key={event.key} className='slider__content--item'>
+						<h1 className='slider__title'>{event.event_name}</h1>
+						<img src={event.event_img} alt={event.event_name} />
+						<p className='slider-description'>{event.event_ubication}</p>
 					</div>
 				))}
 			</Slider>
