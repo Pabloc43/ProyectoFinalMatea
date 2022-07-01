@@ -1,0 +1,22 @@
+.navbar>.container{
+    justify-content: flex-start!important;   
+    margin-left: 2%!important;
+}
+.navbar h5{
+    color: rgb(213, 76, 26)!important;
+    margin-top: 8%;
+    margin-right: 30px;
+}
+.navbar-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5%;
+}
+.navbar-nav a :hover{
+    color: red !important;
+
+}
+.Modal {
+    width: 75%!important;
+}
+

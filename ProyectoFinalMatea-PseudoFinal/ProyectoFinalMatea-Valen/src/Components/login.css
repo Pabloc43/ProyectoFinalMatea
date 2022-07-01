@@ -1,0 +1,18 @@
+.body{
+    background-image: url(../../public/img/e1.jpg); 
+    width: 100vw;
+    height:100vh;
+    margin:0;
+    padding: 0;
+    background-size: cover;
+}
+.login{
+    padding-top: 15%;
+}
+.contLogin{
+    display: flex;
+    justify-content: center;
+}
+.mail{
+    width: 650px;
+}
