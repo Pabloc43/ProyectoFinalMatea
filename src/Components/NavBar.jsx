@@ -28,10 +28,10 @@ const NavBar = () => {
   
     <Navbar bg="dark" className="w-100" variant="light">
      
-    <Container className="d-flex text-center">
-    <Navbar.Brand id="logo" className="d-flex">  <img src="../../img/Logo.png" width={60} alt="User_img" /> <h5>Fideos con Tuki</h5></Navbar.Brand>
-    <Nav className="d-flex justify-content-between flex-wrap w-100">
-        <div className="d-flex">
+    <Container className="d-flex text-center flex-wrap justify-content-between">
+    <Navbar.Brand id="logo" className="d-flex align-items-center col-md-12 col-lg-3 col">  <img src="../../img/Logo.png" width={60} alt="User_img" /> <h5 className="">Fideos con Tuki</h5></Navbar.Brand>
+    <Nav className="d-flex justify-content-between flex-wrap col-md-12 col-lg-8 justify-content-between">
+        <div className="d-flex ">
       <Link to="/">{casaIcon} Home</Link>
       <Link to="/events"> {calendarIcon} Cartelera</Link>
 

@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap-grid.css'
 import 'bootstrap/dist/css/bootstrap.rtl.min.css.map'
 import Producto from "./Components/Producto";
 import items from "./Components/data_eventos";
+import Footer from "./Components/Footer.jsx";
 
 
 
@@ -73,6 +74,7 @@ function App(dato) {
    {/* <Route element={<ProfileModal />} path="/profile"></Route> */}
 
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

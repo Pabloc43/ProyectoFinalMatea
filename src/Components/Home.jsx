@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LazyHero from "react-lazy-hero";
+import LazyHero from "react-lazy-hero/lib/LazyHero";
 import "../Components/home.css"
 import Fade from "react-bootstrap/Fade";
 import Card from "react-bootstrap/Card";
