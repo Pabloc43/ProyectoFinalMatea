@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     
   
-    <Navbar bg="dark" className="w-100" variant="light">
+    <Navbar bg="dark saoko" className="w-100" variant="light">
      
     <Container className="d-flex text-center flex-wrap justify-content-between">
     <Navbar.Brand id="logo" className="d-flex align-items-center col-md-12 col-lg-3 col">  <img src="../../img/Logo.png" width={60} alt="User_img" /> <h5 className="">Fideos con Tuki</h5></Navbar.Brand>

@@ -266,8 +266,12 @@ margin-bottom: 100px;}
 
       @media screen and (max-width:993px) {
         .dkk{
-            background-color: red;
-            bottom: 5000px;
             margin-bottom: 300px;
+        }
+      }
+
+      @media screen and (max-width:413px) {
+        .saoko{
+          margin-bottom: 100px !important;
         }
       }
