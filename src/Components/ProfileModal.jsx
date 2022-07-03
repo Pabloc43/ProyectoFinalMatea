@@ -56,7 +56,7 @@ function ProfileModal(props) {
           </Container>
         </Modal.Body>
         <Modal.Footer className="bg-secondary">
-          <Button onClick={props.onHide} className="button-dark" >Cerrar</Button>
+          <Button onClick={()=>window.location.href='/profile'} className="button-dark" >Editar</Button>
         </Modal.Footer>
       </Modal>
     );

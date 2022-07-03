@@ -20,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.rtl.min.css.map'
 import Producto from "./Components/Producto";
 import items from "./Components/data_eventos";
 import Footer from "./Components/Footer.jsx";
+import Profile from "./Components/Profile.jsx";
 
 
 
@@ -34,9 +35,8 @@ function App(dato) {
   useEffect(()=>{
     fetch("./data_eventos.json")
     .then(res => res.json()
-    .then(data => setEventos(data)))
+    .then(data => setEventos(data))) 
   }, [])
-
   const [Users, setUsers] = useState([]);
 
   
@@ -49,7 +49,7 @@ function App(dato) {
 
   /* Seccion Login (Valen)*/
 
-  const [logged, setLogged] = useState(true)
+  const [logged, setLogged] = useState(false)
   useEffect(() => setLogged(localStorage.getItem('idUsers') !== 'arielpereira@gmail.com'), [localStorage.getItem('idUsers')])
 
   function signOut () {
@@ -60,20 +60,22 @@ function App(dato) {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar logged={logged} signOut={signOut}/>
       <Routes>
         <Route element={<Home/>} path="/" />
-        {!logged ?  
+        {!logged &&  
           <Route path="/profile" element={           
-              <Link to='/login'>
-                  <button className="btn btn-secondary" onClick={signOut}>Cerrar sesion</button>
+            <>
+                <Profile />
+                <Link to='/login'>
+                <button className="btn btn-secondary" onClick={signOut}>Cerrar sesion</button>
               </Link>
+            </>
             }> 
-          </Route> : 
+          </Route>
+        }  
           <Route path="/login" element={<Login algo={dato} style={{backgroundImage: 'url(../public/img/e1.jpg);'}} />}>
           </Route>
-        }
-        
         
         <Route element={<Cartelera />} path="/events">
 

@@ -6,7 +6,7 @@ import { Container, Col, Form} from "react-bootstrap";
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ProfileModal from "./ProfileModal";
-import { faUser, faCartShopping, faCalendarWeek, faRightFromBracket, faSearch} from '@fortawesome/free-solid-svg-icons'
+import { faUser, faCartShopping, faCalendarWeek, faRightFromBracket, faSearch, faFrog} from '@fortawesome/free-solid-svg-icons'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -15,14 +15,15 @@ const carritoIcon = <FontAwesomeIcon icon={faCartShopping} />
 const calendarIcon = <FontAwesomeIcon icon={faCalendarWeek} />
 const casaIcon = <FontAwesomeIcon icon={faHome} />
 const userIcon = <FontAwesomeIcon icon={faUser} />
-const loginIcon = <FontAwesomeIcon icon={faRightFromBracket} />
+const loginIcon = <FontAwesomeIcon icon={faFrog} />
+const logoutIcon = <FontAwesomeIcon icon={faRightFromBracket} /> 
 
 
 
 
-const NavBar = () => {
+const NavBar = (props) => {
+  let {logged, signOut} = props
   const [modalShow, setModalShow] = React.useState(false);
- 
   return (
     
   
@@ -47,10 +48,14 @@ const NavBar = () => {
       
       <div className="d-flex">
       <Link to="/shopping">{carritoIcon} Carrito</Link>
-      <Nav.Link className="text-light" variant="primary" onClick={() => 
+      {!logged &&
+        <>
+              <Nav.Link className="text-light" variant="primary" onClick={() => 
         setModalShow(true)}>{userIcon} Profile</Nav.Link><ProfileModal show={modalShow} onHide={() =>
          setModalShow(false)}/>
-      <Link to="/login"> {loginIcon} Login</Link>
+        </>
+      }
+      <Link to={logged ? '/profile' : "/login"} onClick={signOut}> {logged ? loginIcon : logoutIcon} {logged ? 'Login' : 'Logout'}</Link>
       </div>
     </Nav>
     </Container>
