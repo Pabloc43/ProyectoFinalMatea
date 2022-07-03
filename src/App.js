@@ -3,6 +3,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom"; 
+import {Link } from "react-router-dom";
 
 import Home from './Components/Home.jsx'
 import { useState } from "react";
@@ -48,12 +49,12 @@ function App(dato) {
 
   /* Seccion Login (Valen)*/
 
-  const [logged, setLogged] = useState(false)
-  useEffect(() => setLogged(localStorage.getItem('idUsers') !== null), [localStorage.getItem('idUsers')])
+  const [logged, setLogged] = useState(true)
+  useEffect(() => setLogged(localStorage.getItem('idUsers') !== 'arielpereira@gmail.com'), [localStorage.getItem('idUsers')])
 
   function signOut () {
     localStorage.removeItem('idUsers')
-  }
+    window.location.href = '/login';  }
 
   {/*Seccion Roote (Pablo)*/}
 
@@ -62,16 +63,25 @@ function App(dato) {
       <NavBar />
       <Routes>
         <Route element={<Home/>} path="/" />
-        <Route element={logged ? <> <Home/> 
-        <form> 
-          <button className="btn btn-secondary" onClick={signOut}>Cerrar sesion</button>
-        </form>
-        </> : <Login algo={dato} style={{backgroundImage: 'url(../public/img/e1.jpg);'}}/>} path="/login"></Route>        <Route element={<Cartelera />} path="/events"></Route>
+        {!logged ?  
+          <Route path="/profile" element={           
+              <Link to='/login'>
+                  <button className="btn btn-secondary" onClick={signOut}>Cerrar sesion</button>
+              </Link>
+            }> 
+          </Route> : 
+          <Route path="/login" element={<Login algo={dato} style={{backgroundImage: 'url(../public/img/e1.jpg);'}} />}>
+          </Route>
+        }
+        
+        
+        <Route element={<Cartelera />} path="/events">
+
+        </Route>
         <Route element={<Cartelera eventos={Eventos} />} path="/events"></Route>
         
         {items.map((item, index) => <Route key={index} element={<Producto key={index} eventos={items[index]} />} path={`/events/product${index+1}`}></Route>)}
         <Route element={<Carrito />} path="/shopping"></Route>
-   {/* <Route element={<ProfileModal />} path="/profile"></Route> */}
 
       </Routes>
       <Footer />

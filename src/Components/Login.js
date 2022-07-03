@@ -1,30 +1,19 @@
 import React, { useState } from 'react'
+import {Link } from "react-router-dom";
 /* import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap' */
 import '../Components/login.css'
 import { Formik } from 'formik'
 
-export default function Login() {
+export default function Login(props) {
+   let {algo} = props
+   const [dato, setDato] = useState('')
+    
+    function loguear() {
+      localStorage.setItem('idUsers', document.getElementById('email').value)
+      window.location.href=  formularioEnviado ? '/login' : '/profile';
+    }
 
-  /*   const [dato, setDato] = useState({
-      email: "",
-      contraseña: ""
-    })
-    function inputCambio(e) {
-      setDato({
-        ...dato, [e.target.name]: e.target.value
-      })
-      console.log(e.target.value)
-    }
-  
-    function guardarDato(e) {
-      setDato({
-        ...dato, [e.target.name]: e.target.value
-      })
-      localStorage.setItem('idUsers', dato)
-      console.log(e.target.value)
-    }
-   */
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
   return (
     <>
@@ -61,7 +50,8 @@ export default function Login() {
 				}}
       >
         {({ values, errors, touched, handleSubmit, handleChange, handleBlur}) => (
-          <form className='formulario' onSubmit={handleSubmit}>
+          <div className='container w-100'>
+          <form className='formulario mx-auto' onSubmit={handleSubmit}>
             <div>
               <label htmlFor='email'>Email</label>
               <input
@@ -89,9 +79,10 @@ export default function Login() {
               />
             {touched.contraseña && errors.contraseña && <div className='error'>{errors.contraseña}</div>}
             </div>
-            <button type='submit' onSubmit={handleChange} >Enviar</button>
+            <Link to={!formularioEnviado ? '/profile' : '/login'}><button type='submit' onSubmit={handleChange} onClick={loguear} >Enviar</button></Link>
             {formularioEnviado && <p className="exito">Formulario enviado con exito!</p>}
           </form>
+          </div>
         )}
       </Formik>
     </>

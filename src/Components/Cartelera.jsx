@@ -23,7 +23,7 @@ export default function Cartelera() {
     <main>
       <Carrusel eventos={items}></Carrusel>
       <section className="menu section">
-        <div className="title">
+        <div className="title text-light">
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>

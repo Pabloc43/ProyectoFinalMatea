@@ -12,3 +12,18 @@ body{
 .hero{
     opacity: 0.9;
 }
+
+#FormCarrito{
+    width: 40vw !important;
+    min-width: 200px;
+}
+
+@media screen and (max-width:1280px) {
+    #FormCarrito{
+        width: 100vw !important;
+    }
+}
+
+.imagenCarro{
+    max-width: 400px !important;
+}

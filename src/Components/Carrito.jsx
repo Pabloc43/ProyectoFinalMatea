@@ -7,14 +7,16 @@ import FormCarrito from './FormCarrito';
 
 export default function Carrito() {
   return (
-    <div className='d-flex'>
+    <div className='d-flex flex-wrap justify-content-center'>
       <FormCarrito />
     <section className='p-4' >
       <article >
 
           <Card className="border-dark bg-light text-white m-2">
-            <div className='d-flex justify-content'>
-              <Card.Img style={{ width: "300px" }} src="img/e1.jpg" alt="Card image" />
+            <div className='d-flex justify-content flex-wrap justify-content-center' >
+              <div className='imagenCarro d-flex m-auto'>
+              <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
+              </div>
               <div className='p-2'>
                 <Card.Title className="text-dark">Billie Eilish</Card.Title>
                 <Card.Title className="text-dark">22/02/2022</Card.Title>
@@ -26,10 +28,12 @@ export default function Carrito() {
               </div>
             </div>
           </Card>
-      
+
           <Card className="border-dark bg-light text-white m-2">
-            <div className='d-flex justify-content'>
-              <Card.Img style={{ width: "300px" }} src="img/e1.jpg" alt="Card image" />
+            <div className='d-flex justify-content flex-wrap justify-content-center' >
+              <div className='imagenCarro d-flex m-auto'>
+              <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
+              </div>
               <div className='p-2'>
                 <Card.Title className="text-dark">Billie Eilish</Card.Title>
                 <Card.Title className="text-dark">22/02/2022</Card.Title>
@@ -41,11 +45,12 @@ export default function Carrito() {
               </div>
             </div>
           </Card>
-       
-      
+
           <Card className="border-dark bg-light text-white m-2">
-            <div className='d-flex justify-content'>
-              <Card.Img style={{ width: "300px" }} src="img/e1.jpg" alt="Card image" />
+            <div className='d-flex justify-content flex-wrap justify-content-center' >
+              <div className='imagenCarro d-flex m-auto'>
+              <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
+              </div>
               <div className='p-2'>
                 <Card.Title className="text-dark">Billie Eilish</Card.Title>
                 <Card.Title className="text-dark">22/02/2022</Card.Title>
@@ -57,11 +62,12 @@ export default function Carrito() {
               </div>
             </div>
           </Card>
-       
-      
+
           <Card className="border-dark bg-light text-white m-2">
-            <div className='d-flex justify-content'>
-              <Card.Img style={{ width: "300px" }} src="img/e1.jpg" alt="Card image" />
+            <div className='d-flex justify-content flex-wrap justify-content-center' >
+              <div className='imagenCarro d-flex m-auto'>
+              <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
+              </div>
               <div className='p-2'>
                 <Card.Title className="text-dark">Billie Eilish</Card.Title>
                 <Card.Title className="text-dark">22/02/2022</Card.Title>
@@ -73,7 +79,6 @@ export default function Carrito() {
               </div>
             </div>
           </Card>
-        
       </article>
     </section>
     </div>

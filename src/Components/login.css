@@ -3,16 +3,16 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
+	
 }
 
 .formulario {
-	min-width: 600px;
-	margin-top: 50px;
+	max-width: 900px;
+	margin: 100px 0 300px 0;
 	background: rgb(23, 1, 42);
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: rgba(252, 252, 252, 0.16) 0px 1px 4px;
-	margin: 50px;
 }
 
 .formulario > div {

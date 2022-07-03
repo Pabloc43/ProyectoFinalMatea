@@ -16,7 +16,7 @@ export default function FormCarrito() {
     };
   
     return (
-      <Form id='FormCarrito' noValidate validated={validated} onSubmit={handleSubmit} className="w-50 p-4 d-block text-danger">
+      <Form id='FormCarrito' noValidate validated={validated} onSubmit={handleSubmit} className="w-25 p-4 d-block text-danger">
         <Row className="mb-3">
           <Form.Group  controlId="validationCustom01">
             <Form.Label>Nombre</Form.Label>
