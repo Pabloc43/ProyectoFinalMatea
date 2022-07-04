@@ -1,0 +1,34 @@
+
+
+.addRito{
+  text-align: center;
+}
+
+.contador{
+  font-size: 40px;
+  color: rgb(65, 58, 22);
+}
+
+.botonMenos{
+  color: rgb(211, 33, 33);
+}
+
+.botonMas{
+  color: rgb(27, 80, 14);
+}
+
+.agregar{
+  padding: 10px 5px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(81, 82, 28);
+  color: #fff;
+}
+
+.tuki{
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 150px;
+}
+body{
+  background-image: url(../public/img/bg.jpg);
+}
