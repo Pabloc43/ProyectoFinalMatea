@@ -16,14 +16,14 @@ export default function FormCarrito() {
     };
   
     return (
-      <Form id='FormCarrito' noValidate validated={validated} onSubmit={handleSubmit} className="w-25 p-4 d-block text-danger">
-        <Row className="mb-3">
+      <Form id='FormCarrito' noValidate validated={validated} onSubmit={handleSubmit} className=" p-4 text-light">
+        <Row className="mb-3 me-4" >
           <Form.Group  controlId="validationCustom01">
-            <Form.Label>Nombre</Form.Label>
+            <Form.Label >Nombre</Form.Label>
             <Form.Control
               required
               type="text"
-              placeholder="First name"
+              placeholder="Adrian"
             />
             <Form.Control.Feedback>Buena!</Form.Control.Feedback>
           </Form.Group>
@@ -32,7 +32,7 @@ export default function FormCarrito() {
             <Form.Control
               required
               type="text"
-              placeholder="Last name"
+              placeholder="Rodriguez"
             />
             </Form.Group>
           <Form.Group   controlId="validationCustomEmail">
@@ -40,7 +40,7 @@ export default function FormCarrito() {
             <InputGroup hasValidation>
               <Form.Control
                 type="email"
-                placeholder="Email"
+                placeholder="correo@correo.com"
                 required
               />
               <Form.Control.Feedback type="invalid">
@@ -52,21 +52,21 @@ export default function FormCarrito() {
         <Row className="mb-3">
           <Form.Group  md="6" controlId="validationCustom03">
             <Form.Label>Ciudad</Form.Label>
-            <Form.Control type="text" placeholder="City" required />
+            <Form.Control type="text" placeholder="Cerro" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid city.
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group  md="3" controlId="validationCustom04">
             <Form.Label>Pais</Form.Label>
-            <Form.Control type="text" placeholder="State" required />
+            <Form.Control type="text" placeholder="Uruguay" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid country.
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group  md="3" controlId="validationCustom05">
           <Form.Label>Codigo Postal</Form.Label>
-            <Form.Control type="Number" placeholder="Codigo Postal" minLength={3} maxLength={5} required />
+            <Form.Control type="Number" placeholder="11111" minLength={3} maxLength={5} required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid postal code.
             </Form.Control.Feedback>
@@ -81,28 +81,30 @@ export default function FormCarrito() {
                 <option value="Credito">Credito</option>
                 <option value="Debito int">Debito int.</option>
                 <option value="Credito int">Credito int.</option>
+                <Form.Group className="mb-3 ms-4 align-self-center">
+                  <Form.Check
+                    required
+                    label="Acepto los terminos y condiciones"
+                    feedback="You must agree before submitting."
+                    feedbackType="invalid"
+                  />
+                 </Form.Group>
 
                 </Form.Select>
-                <>
                 <Form.Label>Cuotas</Form.Label>
-            <Form.Control type="Number" className='w-50' placeholder="Nro de cuotas" min={0} max={5} required />
+                <div className='d-flex'>
+                
+            <Form.Control type="Number" className='w-50 me-2 mb-4' placeholder="Nro de cuotas" min={0} max={5} required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid postal code.
             </Form.Control.Feedback>
- 
-            </>
+            <Button className='botonCompra ms-4'type="submit">Realizar compra</Button>
+            </div>
             <Form.Control.Feedback>Buena!</Form.Control.Feedback>
           </Form.Group>
         </Row>
-        <Form.Group className="mb-3">
-          <Form.Check
-            required
-            label="Acepto los terminos y condiciones"
-            feedback="You must agree before submitting."
-            feedbackType="invalid"
-          />
-        </Form.Group>
-        <Button type="submit">Realizar compra</Button>
+        
+        
       </Form>
     );
   }

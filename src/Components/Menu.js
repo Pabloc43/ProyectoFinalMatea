@@ -11,7 +11,7 @@ const Menu = ({ items }) => {
             <Link to={`product${key}`}><img src={event_img} alt={title} className="photo" /></Link>
             <div className="item-info">
               <header>
-              <Link to={`product${key}`}><h4>{event_name}</h4></Link>
+              <Link to={`product${key}`}><h4 className='name'>{event_name}</h4></Link>
                 <h4 className="price">${event_price}</h4>
               </header>
               <p className="item-text">{event_info}</p>
