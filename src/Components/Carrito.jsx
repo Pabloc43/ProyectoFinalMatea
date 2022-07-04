@@ -12,69 +12,69 @@ export default function Carrito() {
     <section className='p-4' >
       <article >
 
-          <Card className="border-dark bg-Card text-light m-2">
+          <Card className="border-dark bg-light text-white m-2">
             <div className='d-flex justify-content flex-wrap justify-content-center' >
               <div className='imagenCarro d-flex m-auto'>
               <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
               </div>
               <div className='p-2'>
-                <Card.Title className="text-light">Billie Eilish</Card.Title>
-                <Card.Title className="text-light">22/02/2022</Card.Title>
-                <Card.Text className='text-light'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
+                <Card.Title className="text-dark">Billie Eilish</Card.Title>
+                <Card.Title className="text-dark">22/02/2022</Card.Title>
+                <Card.Text className='text-dark'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
                 <br />
                 <div className='d-flex flex-row-reverse m-1'>
-                  <Button variant="outline-light" size='sm' className='p-2'>Eliminar del carrito</Button>
+                  <Button variant="outline-dark" size='sm' className='p-2'>Eliminar del carrito</Button>
                 </div>
               </div>
             </div>
           </Card>
 
-          <Card className="border-dark bg-Card text-white m-2">
+          <Card className="border-dark bg-light text-white m-2">
             <div className='d-flex justify-content flex-wrap justify-content-center' >
               <div className='imagenCarro d-flex m-auto'>
               <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
               </div>
               <div className='p-2'>
-                <Card.Title className="text-light">Billie Eilish</Card.Title>
-                <Card.Title className="text-light">22/02/2022</Card.Title>
-                <Card.Text className='text-light'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
+                <Card.Title className="text-dark">Billie Eilish</Card.Title>
+                <Card.Title className="text-dark">22/02/2022</Card.Title>
+                <Card.Text className='text-dark'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
                 <br />
                 <div className='d-flex flex-row-reverse m-1'>
-                  <Button variant="outline-light" size='sm' className='p-2'>Eliminar del carrito</Button>
+                  <Button variant="outline-dark" size='sm' className='p-2'>Eliminar del carrito</Button>
                 </div>
               </div>
             </div>
           </Card>
 
-          <Card className="border-dark bg-Card text-white m-2">
+          <Card className="border-dark bg-light text-white m-2">
             <div className='d-flex justify-content flex-wrap justify-content-center' >
               <div className='imagenCarro d-flex m-auto'>
               <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
               </div>
               <div className='p-2'>
-                <Card.Title className="text-light">Billie Eilish</Card.Title>
-                <Card.Title className="text-light">22/02/2022</Card.Title>
-                <Card.Text className='text-light'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
+                <Card.Title className="text-dark">Billie Eilish</Card.Title>
+                <Card.Title className="text-dark">22/02/2022</Card.Title>
+                <Card.Text className='text-dark'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
                 <br />
                 <div className='d-flex flex-row-reverse m-1'>
-                  <Button variant="outline-light" size='sm' className='p-2'>Eliminar del carrito</Button>
+                  <Button variant="outline-dark" size='sm' className='p-2'>Eliminar del carrito</Button>
                 </div>
               </div>
             </div>
           </Card>
 
-          <Card className="border-dark bg-Card text-white m-2">
+          <Card className="border-dark bg-light text-white m-2">
             <div className='d-flex justify-content flex-wrap justify-content-center' >
               <div className='imagenCarro d-flex m-auto'>
               <Card.Img src="img/e1.jpg" alt="Card image imagenCarro" />
               </div>
               <div className='p-2'>
-                <Card.Title className="text-light">Billie Eilish</Card.Title>
-                <Card.Title className="text-light">22/02/2022</Card.Title>
-                <Card.Text className='text-light'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
+                <Card.Title className="text-dark">Billie Eilish</Card.Title>
+                <Card.Title className="text-dark">22/02/2022</Card.Title>
+                <Card.Text className='text-dark'>Montevideo xdd te imaginas...estaria bueno la verda</Card.Text>
                 <br />
                 <div className='d-flex flex-row-reverse m-1'>
-                  <Button variant="outline-light" size='sm' className='p-2'>Eliminar del carrito</Button>
+                  <Button variant="outline-dark" size='sm' className='p-2'>Eliminar del carrito</Button>
                 </div>
               </div>
             </div>

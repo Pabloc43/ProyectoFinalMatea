@@ -1,46 +1,16 @@
 import React from 'react'
-import { useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleMinus, faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import FormCarrito from './FormCarrito'
-
-
+import {Link } from "react-router-dom";
+import Contador from '../contadorCard';
 
 export default function Producto(props) {
   const {key, title, event_img, event_name, event_price, event_info, event_type, event_date,
-          event_stock, event_ubication, event_duration, event_hour, event_code } = props.eventos;
- 
-
-  const [counter, setCounter] = useState(0)
-   const [Price, setPrice] = useState(0)
-
-  const handleClick1 = () => {
-    counter < 15 ? setCounter(counter + 1) : setCounter(0)
-    counter < 15 ? setPrice(Price + event_price) : setPrice(0)
-    
-  }
-
-
-  
-  const handleClick2 = () => {
-    counter > 1 ? setCounter(counter - 1) : setCounter(0);
-    counter > 1 ? setPrice(Price - event_price) : setPrice(0)
-    
-    
-  }
-function handleClick3(){
-
-    document.title = `Fideos con Tuki (${counter}) `
-  }
-      
-         
+          event_stock, event_ubication, event_duration, event_hour, event_code } = props.eventos
 
   return (
-    <article className="evento container align-items-center justify-content-center mt-5 text-white w-100">
+    <article className="evento container d-flex align-items-center justify-content-center mt-5 text-white w-100">
       <div className='row'>
       <div className='col-12 col-md-5 col-lg-6'>
         <img src={`${event_img}`} alt={title} className="h-100 photoCard " />
-        
       </div>
         <div className="item-info bg-black col-12 col-md-7 col-lg-6">
           <header className='d-flex justify-content-center mb-2 '>
@@ -74,32 +44,13 @@ function handleClick3(){
 
           </ul>
                 
-          <h2 className="price mt-4">Precio por entrada: ${event_price}</h2>
-          <h2 className='price mt-4'>Tu total: ${Price}</h2> 
-          <div  className="d-flex flex-column ">
-
-                    {/*---------------- Contador -------------- */}
-      <h3 className="addRito">Agregar entradas</h3>
-      <div>
-    </div>
-      <p className="addRito contador">
-        {counter}
-      </p>
-      <div className="buttons d-flex justify-content-around">
-        <FontAwesomeIcon icon={ faCircleMinus }  onClick={handleClick2} className="fa-3x botonMenos"/>
-        <FontAwesomeIcon icon={ faCirclePlus }  onClick={handleClick1} className="fa-3x botonMas"/>
-
-
-      </div>
-    </div>
+          <h2 className="price mt-4">${event_price}</h2>
+          <Contador key={key}/>
           <div className="d-flex justify-content-center my-3">
-          <button className="agregar" onClick={handleClick3}>Agregar al carrito</button>
+          <button className="agregar">Agregar al carrito</button>
           </div>
         </div>
     </div>
-    <FormCarrito />
-    
-
   </article>
   )
 }

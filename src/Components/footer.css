@@ -14,7 +14,7 @@ p {
   display: block;
   width: 115px;
   height: 3px;
-  background: blueviolet; }
+  background: #007bff; }
 
 .animate-border:after {
   position: absolute;
@@ -45,7 +45,7 @@ p {
     font-size: 24px;
     top: -15px;
     position: relative;
-    color:blueviolet; }
+    color:#007bff; }
 
 .dk-footer-box-info {
   position: absolute;
@@ -149,13 +149,9 @@ margin-bottom: 100px;}
   color: #878787;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
+  transition: all 0.3s; }
   .footer-widget a:hover {
-    color: #7804aa;
-    font-size: medium;
-  }
+    color: #007bff; }
 
 .footer-widget:after {
   content: "";
@@ -179,11 +175,11 @@ margin-bottom: 100px;}
     position: absolute;
     top: 0;
     right: 0;
-    padding: 12px 24px 15.3px 17px;
+    padding: 12px 24px 12px 17px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    border: 1px solid #dd00ff;
-    background: #dd00ff;
+    border: 1px solid #007bff;
+    background: #007bff;
     color: #fff; }
   .dk-footer-form button:hover {
     cursor: pointer; }
@@ -262,15 +258,11 @@ margin-bottom: 100px;}
     z-index: 999;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
-    transition: all 0.3s linear; 
-    transform: scale(100%);
-  }
+    transition: all 0.3s linear; }
     .back-to-top .btn-dark:hover {
       cursor: pointer;
-      background: #c000e1;
-      border-color: transparent; 
-      transform: scale(120%);
-    }
+      background: #FA6742;
+      border-color: #FA6742; }
 
       @media screen and (max-width:993px) {
         .dkk{

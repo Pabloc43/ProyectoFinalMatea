@@ -32,12 +32,12 @@ const NavBar = (props) => {
     <Container className="d-flex text-center flex-wrap justify-content-between">
     <Navbar.Brand id="logo" className="d-flex align-items-center col-md-12 col-lg-3 col">  <img src="../../img/Logo.png" width={60} alt="User_img" /> <h5 className="">Fideos con Tuki</h5></Navbar.Brand>
     <Nav className="d-flex justify-content-between flex-wrap col-md-12 col-lg-8 justify-content-between">
-        <div className="d-flex">
-      <Link to="/" className="iconos">{casaIcon} Home</Link>
-      <Link to="/events" className="iconos"> {calendarIcon} Cartelera</Link>
+        <div className="d-flex ">
+      <Link to="/">{casaIcon} Home</Link>
+      <Link to="/events"> {calendarIcon} Cartelera</Link>
 
       </div>
-      <div className="d-flex search">  
+      <div className="d-flex">  
         <Col xs={12} className="d-flex p-3">
           <Form.Control placeholder="Buscar"/>
                     <button type="button" className="btn btn-danger">
@@ -47,7 +47,7 @@ const NavBar = (props) => {
       </div>
       
       <div className="d-flex">
-      <Link to="/shopping" className="iconos" id="carritoIcono">{carritoIcon} Carrito</Link>
+      <Link to="/shopping">{carritoIcon} Carrito</Link>
       {!logged &&
         <>
               <Nav.Link className="text-light" variant="primary" onClick={() => 
@@ -55,7 +55,7 @@ const NavBar = (props) => {
          setModalShow(false)}/>
         </>
       }
-      <Link to={logged ? '/profile' : "/login"} onClick={signOut} className="iconos"> {logged ? loginIcon : logoutIcon} {logged ? 'Login' : 'Logout'}</Link>
+      <Link to={logged ? '/profile' : "/login"} onClick={signOut}> {logged ? loginIcon : logoutIcon} {logged ? 'Login' : 'Logout'}</Link>
       </div>
     </Nav>
     </Container>

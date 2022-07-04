@@ -12,7 +12,7 @@ export default function Footer() {
                 <div   className="dkk col-md-12 col-lg-4 ">
                     <div   className="dk-footer-box-info ">
                         <a href="index.html"   className="footer-logo">
-                            <img src="./img/Logo.png" alt="footer_logo" width={350} ></img>
+                            <img src="./img/Logo.png" alt="footer_logo" className="img-fluid w-50" ></img>
                         </a>
                         <p   className="footer-info-text">
                         </p>

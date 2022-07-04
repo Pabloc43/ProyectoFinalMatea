@@ -9,7 +9,7 @@
 .formulario {
 	max-width: 900px;
 	margin: 100px 0 300px 0;
-	background-image: url(../../public/img/login.jpg);
+	background: rgb(23, 1, 42);
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: rgba(252, 252, 252, 0.16) 0px 1px 4px;
@@ -52,7 +52,7 @@
 
 .formulario button[type="submit"] {
 	display: block;
-	background: rgb(82, 18, 142);
+	background: #0085FF;
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	border: none;
@@ -66,7 +66,7 @@
 }
 
 .formulario button[type="submit"]:hover {
-	background: blueviolet;
+	background: #0051ff;
 }
 
 .formulario .exito {
