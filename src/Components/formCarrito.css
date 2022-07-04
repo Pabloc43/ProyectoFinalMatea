@@ -1,0 +1,21 @@
+#FormCarrito{
+    padding-right: 5%!important;
+    display: flex;
+    width: 105%!important;
+}
+.botonCompra{
+    transition: all 0.3s linear !important;
+    background-color: blueviolet !important;
+    border-color: transparent !important;
+    border-radius: 10px !important;
+    height: 70px!important;
+    width: 300px!important;
+    align-self:flex-end ;
+}
+.botonCompra:hover{
+    transform: scale(120%);
+    background-color: rgb(230, 2, 255) !important;
+}
+.bg-Card{
+    background-image: url(../../public/img/bg-card.jpg);
+}

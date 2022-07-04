@@ -1,0 +1,40 @@
+.navbar>.container{
+    justify-content: flex-start!important;   
+    margin-left: 2%!important;
+}
+.navbar h5{
+    color: rgb(213, 76, 26)!important;
+    margin-top: 8%;
+    margin-right: 30px;
+}
+.navbar-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5%;
+}
+.Modal {
+    width: 75%!important;
+}
+
+.iconos{
+    transition: all 0.3s linear;
+    color: blueviolet;
+    transform: scale(100%);
+}
+.iconos:hover{
+    transform: scale(120%);
+    color: rgb(109, 9, 203);
+}
+.btn-danger{
+    background-color: blueviolet !important;
+    border-color: transparent !important;
+    transition: all 0.3s linear !important;
+    transform: scale(100%);
+}
+.btn-danger:hover{
+    background-color: rgba(142, 28, 248, 0.628) !important;
+    transform: scale(120%);
+}
+.search{
+    transform: scale(110%);
+}
