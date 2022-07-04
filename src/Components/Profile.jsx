@@ -1,64 +1,97 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import {Container} from "react-bootstrap";
-import {Row} from "react-bootstrap";
-import {Col} from "react-bootstrap";
-import './ProfileModal.css';
+import Registro from "./registro";
+
 import items from "./data_user";
 
 function Profile(props) {
+  let {cerrar} = props
   console.log(items)
     return (
-      <div {...props} aria-labelledby="contained-modal-title-vcenter" 
-      size="lg">
-        
-        
-        <Modal.Header closeButton className="bg-secondary">
-          <Modal.Title id="contained-modal-title-vcenter" className="text-light"  >
-            Mi perfil
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="show-grid">
-          <Container>
-            <Row>
-              <Col xs={12} md={4}>
-                <img src={items[0].user_img} width={150} alt="user_photo" className=' rounded-right' />
-              </Col>
-              <Col xs={6} md={6}>
-              <ul>
-                <li> <span className="font-weight-bold">Nombre: </span> {items[0].user_name} {items[0].user_surname} </li>
-                <li> <span className="font-weight-bold">Correo:</span>  {items[0].user_mail}</li>
-                <li> <span className="font-weight-bold">Ubicación:</span> {items[0].user_city}, {items[0].user_country}</li>
-                <li> <span className="font-weight-bold">Dirección:</span>  {items[0].user_address}</li>
-                <li> <span className="font-weight-bold">Tel:</span>  {items[0].user_phone}</li>
-                <li> <span className="font-weight-bold">Postal: </span> {items[0].user_postal}</li>
-               
-              </ul>
-              </Col>
-            </Row>
-  
-            <Row className="text-center">
-                <h4>Mis compras</h4>
-              <Col xs={6} md={4}>
-              Compra 1
-                <img src="../../img/ticket.png" width={120} alt="" />
-              </Col>
-              <Col xs={6} md={4}>
-              Compra 2
-              <img src="../../img/ticket.png" width={120} alt="" />
-              </Col>
-              <Col xs={6} md={4}>
-              Compra 3
-              <img src="../../img/ticket.png" width={120} alt="" />
-              </Col>
-            </Row>
-          </Container>
-        </Modal.Body>
-        <Modal.Footer className="bg-secondary">
-          <Button onClick={()=>window.location.href='/profile'} className="button-dark" >Editar</Button>
+      <>
+        <Modal.Footer className="bg-secondary mt-5">
+          <Button className="button-dark" >{cerrar}</Button>
         </Modal.Footer>
+      <section style={{backgroundColor : "#eee"}}>
+  <div className="container py-5 ">
+    <div className="row ">
+      <div className="col-lg-4">
+        <div className="card mb-4">
+          <div className="card-body text-center">
+            <img src={items[0].user_img} alt="avatar"
+              className="rounded-circle img-fluid" style={{width: "150px"}} />
+            <h5 className="my-3">{items[0].user_name} {items[0].user_surname}</h5>
+
+          </div>
+        </div>
       </div>
+      <form className="col-lg-8 ">
+        <details className="card mb-4 ">
+          <summary className="mx-3 pt-3 list-unstyled d-flex justify-content-between"><div>Datos personales:</div><p className="fs-1">🐸</p></summary>
+          <div className="card-body ">
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Nombre' className="mb-0 text-dark">Full Name</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Nombre" type={'text'} className="text-muted mb-0" value={items[0].user_name + ' ' + items[0].user_surname}></input>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Correo' className="mb-0 text-dark">Email</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Correo" type={'email'} className="text-dark text-muted mb-0" value={items[0].user_mail}></input>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Ubicacion' className="mb-0 text-dark">Ubication</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Ubicacion" type={'text'} className="text-dark text-muted mb-0" value={items[0].user_city}></input>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Direccion' className="mb-0 text-dark">Direction</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Direccion" type={'text'} className="text-dark text-muted mb-0" value={items[0].user_address}></input>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Telefono' className="mb-0 text-dark">Tel</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Telefono" type={'tel'} className="text-dark text-muted mb-0" value={items[0].user_phone}></input>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="row ">
+              <div className="col-sm-3 ">
+                <label htmlFor='Postal' className="mb-0 text-dark">Postal</label>
+              </div>
+              <div className="col-sm-9">
+                <input id="Postal" type={'text'} className="text-dark text-muted mb-0" value={items[0].user_postal}></input>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </form>
+    </div>
+  </div>
+</section>
+      <Registro />
+      </>
     );
   }
 

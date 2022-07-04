@@ -66,10 +66,12 @@ function App(dato) {
         {!logged &&  
           <Route path="/profile" element={           
             <>
-                <Profile />
-                <Link to='/login'>
-                <button className="btn btn-secondary" onClick={signOut}>Cerrar sesion</button>
-              </Link>
+                <Profile cerrar={
+                                  <Link to='/login'>
+                                  <span className="text-light" onClick={signOut}>Cerrar sesion</span>
+                                </Link>
+                }/>
+
             </>
             }> 
           </Route>
